@@ -53,11 +53,10 @@ Median: 38 min<br>
 
 Since school buses typically arrive 20–25 minutes before classes, 75% of delays cause students to miss class time. This pattern indicates that school bus delays have a direct educational impact, particularly for low-income or disabled students who depend on these services.
 
-中文：
-数据清洗后发现延误时长介于 8–76 分钟 之间，统计结果如下：
-平均值（Mean）：38.7 分钟
-中位数（Median）：38 分钟
-第一四分位（Q1）：23 分钟
+数据清洗后发现延误时长介于 8–76 分钟 之间，统计结果如下：<br>
+平均值（Mean）：38.7 分钟<br>
+中位数（Median）：38 分钟<br>
+第一四分位（Q1）：23 分钟<br>
 第三四分位（Q3）：53 分钟
 
 由于校车通常提前 20–25 分钟到校，约 75% 的延误会导致学生迟到或缺课。这一发现表明，校车延误不仅是运营问题，更会加剧教育机会的不平等。
@@ -87,7 +86,6 @@ The Operation Error Index (OEI)—the ratio of operator-controlled delay causes 
 Some operators were responsible for a disproportionately high share of delays, confirming that operator performance is a critical determinant of overall reliability.<br>
 This metric served as the foundation for subsequent CART, Random Forest, and Bootstrap analyses to pinpoint problematic companies.<br>
 
-中文：
 通过计算运营错误指数（OEI）（运营商可控延误占比），发现不同公司之间差异显著。<br>
 部分公司在延误事件中占比极高，说明运营商绩效是决定校车可靠性的重要因素。<br>
 这一结果为后续 CART、随机森林及 Bootstrap 模型分析奠定基础<br>
@@ -114,18 +112,18 @@ CART 与随机森林模型共同验证： **运营商名称**与**线路编号**
 ### Bootstrap Analysis of Problematic Operators
 
 Six problematic operators were identified and categorized:<br>
-* **Mechanical Problems:** Jofaz, SNT, Boro, First Steps<br>
-* **Operational Problems:** Leesel<br>
-* **Mixed Issues:** Quality Transportation<br>
+* Mechanical Problems: Jofaz, SNT, Boro, First Steps<br>
+* Operational Problems: Leesel<br>
+* Mixed Issues: Quality Transportation<br>
   Targeted measures: fleet upgrades, management improvement, or contract replacement.
 
 Bootstrap 分析识别出6家问题运营商：<br>
-* **机械故障型：**Jofaz、SNT、Boro、First Steps<br>
-* **运营调度型：**Leesel<br>
-* **混合型：**Quality Transportation<br>
+* 机械故障型：Jofaz、SNT、Boro、First Steps<br>
+* **运营调度型：Leesel<br>
+* **混合型：Quality Transportation<br>
   针对性措施包括车辆更新、运营优化或终止合同。
 
-### Regression-based Operational Performance Index (OPI)**
+### Regression-based Operational Performance Index (OPI)
 
 An OPI (0–100) was built using four weighted dimensions:<br>
 
@@ -136,31 +134,31 @@ An OPI (0–100) was built using four weighted dimensions:<br>
   Operators with OPI <70 lose contracts; ≥70 get warnings but remain with improvement plans.
 
 Result:<br>
-* **Non-renewed:** Jofaz, First Steps, Quality<br>
-* **Warned but retained:** Boro, SNT, Leesel<br>
+* Non-renewed: Jofaz, First Steps, Quality<br>
+* Warned but retained: Boro, SNT, Leesel<br>
 
 通过线性与逻辑回归模型构建**运营绩效指数（OPI）**，衡量四个维度：效率40%、可靠性30%、响应速度20%、合规性10%。<br>
 OPI低于70的公司合同不再续签；高于70的公司警告并协助改进。<br>
 
 最终结果：<br>
-* **不续签：**Jofaz、First Steps、Quality<br>
-* **保留但警告：**Boro、SNT、Leesel。<br>
+* 不续签：Jofaz、First Steps、Quality<br>
+* 保留但警告：Boro、SNT、Leesel。<br>
 
-### **Problematic Routes**<br>
+### Problematic Routes**<br>
 Several route numbers (e.g., M136, Q863, K132, N534) consistently showed long delays. City officials should re-route buses to avoid congested areas or adjust schedules to include buffer time.
 
 部分线路（如 M136、Q863、K132、N534 等）表现出持续高延误。建议城市交通部门重新规划路线以避开拥堵区域，或调整时刻表增加缓冲时间。
 
 ## Key Insights & Recommendations / 核心结论与建议<br>
-1. **Focus Factors:** Bus operator and route number are the only significant delay drivers.<br>
-2. **Operator Strategy:** Replace three low-performing companies; cooperate with three to fix internal issues.<br>
-3. **Routing Strategy:** Re-route high-delay routes and revise schedules.<br>
-4. **Data Quality:** Introduce system-based validation to prevent inconsistent input.<br>
-5. **Equity Impact:** Reducing delays directly supports educational equality.<br>
+1. Focus Factors: Bus operator and route number are the only significant delay drivers.<br>
+2. Operator Strategy: Replace three low-performing companies; cooperate with three to fix internal issues.<br>
+3. Routing Strategy: Re-route high-delay routes and revise schedules.<br>
+4. Data Quality: Introduce system-based validation to prevent inconsistent input.<br>
+5. Equity Impact: Reducing delays directly supports educational equality.<br>
 
-1. **关键影响因素：**校车运营商与线路编号是唯一显著延误因素。<br>
-2. **运营策略：**终止3家低绩效公司合同，与其余3家合作改进。<br>
-3. **路线策略：**优化拥堵线路，调整校车时刻表。<br>
-4. **数据质量：**在数据系统中增加输入限制，防止格式错误。<br>
-5. **公平性影响：**减少延误有助于弱势学生的教育公平。
+1. 关键影响因素：校车运营商与线路编号是唯一显著延误因素。<br>
+2. 运营策略：终止3家低绩效公司合同，与其余3家合作改进。<br>
+3. 路线策略：优化拥堵线路，调整校车时刻表。<br>
+4. 数据质量：在数据系统中增加输入限制，防止格式错误。<br>
+5. 公平性影响：减少延误有助于弱势学生的教育公平。
 
