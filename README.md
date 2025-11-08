@@ -119,8 +119,8 @@ Six problematic operators were identified and categorized:<br>
 
 Bootstrap 分析识别出6家问题运营商：<br>
 * 机械故障型：Jofaz、SNT、Boro、First Steps<br>
-* **运营调度型：Leesel<br>
-* **混合型：Quality Transportation<br>
+* 运营调度型：Leesel<br>
+* 混合型：Quality Transportation<br>
   针对性措施包括车辆更新、运营优化或终止合同。
 
 ### Regression-based Operational Performance Index (OPI)
@@ -154,7 +154,8 @@ Several route numbers (e.g., M136, Q863, K132, N534) consistently showed long de
 2. Operator Strategy: Replace three low-performing companies; cooperate with three to fix internal issues.<br>
 3. Routing Strategy: Re-route high-delay routes and revise schedules.<br>
 4. Data Quality: Introduce system-based validation to prevent inconsistent input.<br>
-5. Equity Impact: Reducing delays directly supports educational equality.<br>
+5. Equity Impact: Reducing delays directly supports educational equality.
+
 
 1. 关键影响因素：校车运营商与线路编号是唯一显著延误因素。<br>
 2. 运营策略：终止3家低绩效公司合同，与其余3家合作改进。<br>
