@@ -144,7 +144,7 @@ OPI低于70的公司合同不再续签；高于70的公司警告并协助改进�
 * 不续签：Jofaz、First Steps、Quality<br>
 * 保留但警告：Boro、SNT、Leesel。<br>
 
-### Problematic Routes**<br>
+### Problematic Routes<br>
 Several route numbers (e.g., M136, Q863, K132, N534) consistently showed long delays. City officials should re-route buses to avoid congested areas or adjust schedules to include buffer time.
 
 部分线路（如 M136、Q863、K132、N534 等）表现出持续高延误。建议城市交通部门重新规划路线以避开拥堵区域，或调整时刻表增加缓冲时间。
@@ -161,4 +161,41 @@ Equity Impact: Reducing delays directly supports educational equality.
 路线策略：优化拥堵线路，调整校车时刻表。<br>
 数据质量：在数据系统中增加输入限制，防止格式错误。<br>
 公平性影响：减少延误有助于弱势学生的教育公平。
+
+## Code Execution Guide / 代码运行指南<br>
+
+Recommended Environment: RStudio
+
+Open the project NewYork_SchoolBusDelay in RStudio.<br>
+
+Run the scripts in the following order:<br>
+data_clean.R<br>
+descriptive_analysis.R<br> 
+model.R<br>
+
+The raw data is stored in bus_original.csv, which can be downloaded from the NYC Open Data website.
+
+The script data_clean.R will generate bus_clean_result.csv, but this is not the final dataset.<br>
+The final dataset used for descriptive analysis and modeling is bus_clean.csv, which is based on bus_clean_result.csv with several manual corrections.
+
+For Mac users, the code can be run directly after opening the project.<br>
+For Windows users, please modify the file paths — especially replacing “/” with “\”.
+
+
+使用 RStudio 打开项目 NewYork_SchoolBusDelay。
+
+按以下顺序运行脚本：<br>
+data_clean.R<br>
+descriptive_analysis.R<br>
+model.R
+
+原始数据文件为 bus_original.csv，可从纽约市开放数据平台下载。<br>
+脚本 data_clean.R 会生成 bus_clean_result.csv，但这并非最终数据。<br>
+我们在描述性分析与建模中使用的是 bus_clean.csv，它是在 bus_clean_result.csv 基础上经过少量人工校正的版本。<br>
+
+Mac 用户 打开项目后可直接运行。<br>
+Windows 用户 需修改文件路径，特别是将路径符号从 “/” 改为 “\”。
+
+
+
 
