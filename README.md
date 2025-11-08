@@ -43,7 +43,7 @@ Recommendations: Implement input format restrictions (numeric-only for durations
 
 ## Descriptive Analysis / 描述性分析
 
-1.Delay Duration Statistics / 延误时间分布特征
+1. Delay Duration Statistics / 延误时间分布特征
 
 After cleaning, delay durations were found to range between 8 and 76 minutes, with:<br>
 Mean: 38.7 min<br>
@@ -64,43 +64,43 @@ Since school buses typically arrive 20–25 minutes before classes, 75% of delay
 
 2. Delay Cause Analysis / 延误原因分析
 
-Frequency analysis of delay causes revealed that traffic overwhelmingly dominates, but operator-related issues are also major contributors:
+Frequency analysis of delay causes revealed that traffic overwhelmingly dominates, but operator-related issues are also major contributors:<br>
 
-Heavy Traffic ___  Most common cause; beyond direct control but related to routing ___ External
-Mechanical Problem, Won’t Start, Problem Run, Flat Tire	 ___  Operator-controlled, reflect maintenance and management issues ___ Operator
-Weather Conditions ___ Natural factor ___ External
-Other	Mixed / undefined causes ___ Mixed
+Heavy Traffic ___  Most common cause; beyond direct control but related to routing ___ External<br>
+Mechanical Problem, Won’t Start, Problem Run, Flat Tire	 ___  Operator-controlled, reflect maintenance and management issues ___ Operator<br>
+Weather Conditions ___ Natural factor ___ External<br>
+Other	Mixed / undefined causes ___ Mixed<br>
 
 This finding suggests that operational management and routing strategies—rather than environmental conditions—are the main levers for improvement.
 
-延误原因频率分析显示，交通拥堵是首要原因，但运营商可控的机械与调度问题同样重要：
-交通拥堵 ___ 延误最常见原因，虽难控制但可通过线路优化缓解 ___ 外部
-机械故障、车辆未启动、运行异常、轮胎爆裂 ___ 属于公司可控问题，反映维修与调度管理不善 ___ 运营商
-天气因素 ___ 自然不可控因素 ___ 外部
+延误原因频率分析显示，交通拥堵是首要原因，但运营商可控的机械与调度问题同样重要：<br>
+交通拥堵 ___ 延误最常见原因，虽难控制但可通过线路优化缓解 ___ 外部<br>
+机械故障、车辆未启动、运行异常、轮胎爆裂 ___ 属于公司可控问题，反映维修与调度管理不善 ___ 运营商<br>
+天气因素 ___ 自然不可控因素 ___ 外部<br>
 其他	未定义或混合原因 ___ 混合
 
 因此，改进校车准点率的关键应集中于 优化路线与提升运营管理，而非仅关注外部环境
 
 3. Operator Error Index / 运营商差异初步发现
 
-The Operation Error Index (OEI)—the ratio of operator-controlled delay causes to total causes—varied significantly across companies.
-Some operators were responsible for a disproportionately high share of delays, confirming that operator performance is a critical determinant of overall reliability.
-This metric served as the foundation for subsequent CART, Random Forest, and Bootstrap analyses to pinpoint problematic companies.
+The Operation Error Index (OEI)—the ratio of operator-controlled delay causes to total causes—varied significantly across companies.<br>
+Some operators were responsible for a disproportionately high share of delays, confirming that operator performance is a critical determinant of overall reliability.<br>
+This metric served as the foundation for subsequent CART, Random Forest, and Bootstrap analyses to pinpoint problematic companies.<br>
 
 中文：
-通过计算运营错误指数（OEI）（运营商可控延误占比），发现不同公司之间差异显著。
-部分公司在延误事件中占比极高，说明运营商绩效是决定校车可靠性的重要因素。
-这一结果为后续 CART、随机森林及 Bootstrap 模型分析奠定基础
+通过计算运营错误指数（OEI）（运营商可控延误占比），发现不同公司之间差异显著。<br>
+部分公司在延误事件中占比极高，说明运营商绩效是决定校车可靠性的重要因素。<br>
+这一结果为后续 CART、随机森林及 Bootstrap 模型分析奠定基础<br>
 
 4. Summary Insights / 阶段性结论
 
-Most school bus delays last long enough to cause educational disruption.
-Traffic is the main external cause, but operator-controlled issues are equally impactful.
-Operator performance differs drastically—some companies perform significantly worse.
+Most school bus delays last long enough to cause educational disruption.<br>
+Traffic is the main external cause, but operator-controlled issues are equally impactful.<br>
+Operator performance differs drastically—some companies perform significantly worse.<br>
 
-大多数校车延误严重到足以影响上课。
-交通虽是主要外部因素，但运营商可控问题同样关键。
-不同公司表现差距极大，部分运营商延误率显著偏高。
+大多数校车延误严重到足以影响上课。<br>
+交通虽是主要外部因素，但运营商可控问题同样关键。<br>
+不同公司表现差距极大，部分运营商延误率显著偏高。<br>
 
 ## Advanced Analytics / 高级分析与建模
 
@@ -113,54 +113,54 @@ CART 与随机森林模型共同验证： **运营商名称**与**线路编号**
 
 ### Bootstrap Analysis of Problematic Operators
 
-Six problematic operators were identified and categorized:
-* **Mechanical Problems:** Jofaz, SNT, Boro, First Steps
-* **Operational Problems:** Leesel
-* **Mixed Issues:** Quality Transportation
+Six problematic operators were identified and categorized:<br>
+* **Mechanical Problems:** Jofaz, SNT, Boro, First Steps<br>
+* **Operational Problems:** Leesel<br>
+* **Mixed Issues:** Quality Transportation<br>
   Targeted measures: fleet upgrades, management improvement, or contract replacement.
 
-Bootstrap 分析识别出6家问题运营商：
-* **机械故障型：**Jofaz、SNT、Boro、First Steps
-* **运营调度型：**Leesel
-* **混合型：**Quality Transportation
+Bootstrap 分析识别出6家问题运营商：<br>
+* **机械故障型：**Jofaz、SNT、Boro、First Steps<br>
+* **运营调度型：**Leesel<br>
+* **混合型：**Quality Transportation<br>
   针对性措施包括车辆更新、运营优化或终止合同。
 
 ### Regression-based Operational Performance Index (OPI)**
 
-An OPI (0–100) was built using four weighted dimensions:
+An OPI (0–100) was built using four weighted dimensions:<br>
 
-* Efficiency (40%)
-* Reliability (30%)
-* Responsiveness (20%)
-* Compliance (10%)
+* Efficiency (40%)<br>
+* Reliability (30%)<br>
+* Responsiveness (20%)<br>
+* Compliance (10%)<br>
   Operators with OPI <70 lose contracts; ≥70 get warnings but remain with improvement plans.
 
-Result:
-* **Non-renewed:** Jofaz, First Steps, Quality
-* **Warned but retained:** Boro, SNT, Leesel
+Result:<br>
+* **Non-renewed:** Jofaz, First Steps, Quality<br>
+* **Warned but retained:** Boro, SNT, Leesel<br>
 
-通过线性与逻辑回归模型构建**运营绩效指数（OPI）**，衡量四个维度：效率40%、可靠性30%、响应速度20%、合规性10%。
-OPI低于70的公司合同不再续签；高于70的公司警告并协助改进。
+通过线性与逻辑回归模型构建**运营绩效指数（OPI）**，衡量四个维度：效率40%、可靠性30%、响应速度20%、合规性10%。<br>
+OPI低于70的公司合同不再续签；高于70的公司警告并协助改进。<br>
 
-最终结果：
-* **不续签：**Jofaz、First Steps、Quality
-* **保留但警告：**Boro、SNT、Leesel。
+最终结果：<br>
+* **不续签：**Jofaz、First Steps、Quality<br>
+* **保留但警告：**Boro、SNT、Leesel。<br>
 
-### **Problematic Routes**
+### **Problematic Routes**<br>
 Several route numbers (e.g., M136, Q863, K132, N534) consistently showed long delays. City officials should re-route buses to avoid congested areas or adjust schedules to include buffer time.
 
 部分线路（如 M136、Q863、K132、N534 等）表现出持续高延误。建议城市交通部门重新规划路线以避开拥堵区域，或调整时刻表增加缓冲时间。
 
-## Key Insights & Recommendations / 核心结论与建议
-1. **Focus Factors:** Bus operator and route number are the only significant delay drivers.
-2. **Operator Strategy:** Replace three low-performing companies; cooperate with three to fix internal issues.
-3. **Routing Strategy:** Re-route high-delay routes and revise schedules.
-4. **Data Quality:** Introduce system-based validation to prevent inconsistent input.
-5. **Equity Impact:** Reducing delays directly supports educational equality.
+## Key Insights & Recommendations / 核心结论与建议<br>
+1. **Focus Factors:** Bus operator and route number are the only significant delay drivers.<br>
+2. **Operator Strategy:** Replace three low-performing companies; cooperate with three to fix internal issues.<br>
+3. **Routing Strategy:** Re-route high-delay routes and revise schedules.<br>
+4. **Data Quality:** Introduce system-based validation to prevent inconsistent input.<br>
+5. **Equity Impact:** Reducing delays directly supports educational equality.<br>
 
-1. **关键影响因素：**校车运营商与线路编号是唯一显著延误因素。
-2. **运营策略：**终止3家低绩效公司合同，与其余3家合作改进。
-3. **路线策略：**优化拥堵线路，调整校车时刻表。
-4. **数据质量：**在数据系统中增加输入限制，防止格式错误。
+1. **关键影响因素：**校车运营商与线路编号是唯一显著延误因素。<br>
+2. **运营策略：**终止3家低绩效公司合同，与其余3家合作改进。<br>
+3. **路线策略：**优化拥堵线路，调整校车时刻表。<br>
+4. **数据质量：**在数据系统中增加输入限制，防止格式错误。<br>
 5. **公平性影响：**减少延误有助于弱势学生的教育公平。
 
