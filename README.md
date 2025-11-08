@@ -1,6 +1,7 @@
 ## New York City School Bus Delay Analytics:Leveraging Data to Improve Network Reliability 
 ## 纽约市校车延误分析：利用数据分析提升运输网络可靠性
 
+
 ## Project Introduction / 项目简介
 
 This project investigates the persistent issue of school bus delays in New York City using a data-driven analytics approach. Leveraging over 740,000 official records from NYC Open Data (2015–2025), the team conducted systematic data cleaning, descriptive statistics, and advanced modelling (CART, Random Forest, Bootstrap, and regression analysis). The results identified key delay drivers—bus operators and routes—and generated actionable recommendations for improving operational reliability and ensuring fair access to education for all students.<br>
